@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="w-screen h-screen bg-black">
+      <Header></Header>
       <div className='flex flex-col flex-wrap justify-center items-center'>
         <div className='bg-[url(/images/bmisp.png)] w-screen h-64'>
           <h1>BLUEMAGIC ISP</h1>
@@ -16,6 +18,18 @@ function App() {
           </a>
           <a href="https://react.dev" target="_blank">
             <img src={'./images/blob-5626e1c.png'} className="logo react" alt="React logo" />
+          </a>
+        </div>
+
+        <div className='grid grid-flow-col grid-col-3 gap-4' >
+          <a href="https://vite.dev" target="_blank">
+            <img src={'./images/blob-5626e1c.png'} className="w-64" alt="Vite logo" />
+          </a>
+          <a href="https://vite.dev" target="_blank">
+            <img src={'./images/blob-5626e1c.png'} className="w-64" alt="Vite logo" />
+          </a>
+          <a href="https://vite.dev" target="_blank">
+            <img src={'./images/blob-5626e1c.png'} className="w-64" alt="Vite logo" />
           </a>
         </div>
         <div className="card">
