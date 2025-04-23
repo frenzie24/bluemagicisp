@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Hotspots from './components/Hotspots'
 import BlueMagic from './components/BlueMagic'
 import Highlight from './components/Highlight'
+import Contact from './components/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
           <div className='bg-cover bg-[url(/images/bmisp.png)] w-screen h-64'>
 
           </div>
+          <Contact widths={widths}/>
           {/* neat stuff
 
         <div className='w-content h-fit'>
