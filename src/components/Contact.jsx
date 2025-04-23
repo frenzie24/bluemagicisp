@@ -18,8 +18,8 @@ const Contact = ({ widths }) => {
     };
 
     return (
-        <div className={widths + " mx-auto p-6 rounded-lg shadow-md"}>
-            <h2 className="text-xl font-semibold text-gray-300 text-center mb-4">Contact Us</h2>
+        <div className={widths + " mx-auto p-6 rounded-lg"}>
+            <h1 className="font-semibold text-gray-300 text-center mb-4">Contact Us</h1>
             <div className="w-full flex flex-row flex-wrap justify-center">
                 <div className="w-1/2">
                     <form onSubmit={handleSubmit} className="space-y-4 ">
@@ -69,7 +69,7 @@ const Contact = ({ widths }) => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700 transition"
+                            className="w-full bg-gray-700 text-white py-2 rounded-md font-medium hover:bg-gray-900 transition"
                         >
                             Send Message
                         </button>
@@ -84,7 +84,7 @@ const Contact = ({ widths }) => {
                     <a href="tel:+8503724284" className="text-blue-500 hover:underline">
                         8503724284</a> EXT <a href="tel:+202" className="text-blue-500 hover:underline">
                     </a>
-                    <div className="max-w-md mx-auto p-4 rounded-lg shadow-md">
+                    <div className="max-w-md mx-auto p-4 rounded-lg">
                         <h2 className="text-center text-xl font-semibold mb-4 text-gray-300">
                             Hours of Operation
                         </h2>
@@ -131,7 +131,7 @@ const Contact = ({ widths }) => {
 
                 </div>
                 <div className="w-full">
-
+                    <h1>Connect with Us</h1>
 
                     <div className="flex justify-center space-x-4">
                         {/* Facebook Button */}

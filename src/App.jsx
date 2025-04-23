@@ -6,6 +6,7 @@ import BlueMagic from './components/BlueMagic'
 import Highlight from './components/Highlight'
 import Contact from './components/Contact'
 import About from './components/About'
+import BlogPostPreview from './components/BlogPostPreview'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +34,11 @@ function App() {
           <Hotspots Width={widths} />
           <About Width={widths} />
           <Contact widths={widths}/>
+
+          <BlogPostPreview imageSrc={'/images/rs=w_200.3.png'}
+          title={"Look! A laptop"}
+          previewText={'Proin eu vestibulum nunc, eget sagittis neque. Pellentesque rutrum elit ac nisi luctus, et pretium est dignissim. Mauris purus tellus, imperdiet sit amet ultrices sed, pellentesque pharetra dolor. Integer posuere est nec laoreet convallis. Cras cursus, urna id malesuada rhoncus, magna purus finibus nisl, eu porta quam metus et quam.'}
+          />
         </div>
       </div>
     </div>
