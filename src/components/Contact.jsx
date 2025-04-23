@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Contact = ({widths}) => {
+const Contact = ({ widths }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -126,6 +126,37 @@ const Contact = ({widths}) => {
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+
+
+                </div>
+                <div className="w-full">
+
+
+                    <div className="flex justify-center space-x-4">
+                        {/* Facebook Button */}
+                        <button
+                            className="size-[50px] bg-[url(/images/icons8-facebook-30.png)] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                            onClick={() => window.open("https://www.facebook.com", "_blank")}
+                        >
+
+                        </button>
+
+                        {/* Twitter Button */}
+                        <button
+                            className="size-[50px] bg-[url(/images/icons8-twitter-50.png)] text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+                            onClick={() => window.open("https://x.com/bluemagicisp", "_blank")}
+                        >
+
+                        </button>
+
+                        {/* Instagram Button */}
+                        <button
+                            className="size-[50px] bg-[url(/images/icons8-instagram-50.png)] text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+                            onClick={() => window.open("https://www.instagram.com", "_blank")}
+                        >
+
+                        </button>
                     </div>
 
 

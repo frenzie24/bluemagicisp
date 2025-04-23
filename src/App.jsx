@@ -5,6 +5,7 @@ import Hotspots from './components/Hotspots'
 import BlueMagic from './components/BlueMagic'
 import Highlight from './components/Highlight'
 import Contact from './components/Contact'
+import About from './components/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +19,7 @@ function App() {
           <div className='bg-cover bg-[url(/images/bmisp.png)] w-screen h-64'>
 
           </div>
-          <Contact widths={widths}/>
+
           {/* neat stuff
 
         <div className='w-content h-fit'>
@@ -30,17 +31,8 @@ function App() {
           <Highlight widths={widths} color={'bg-cyan-300'} link={'https://readinet.com'}/>
           <BlueMagic widths={widths} />
           <Hotspots Width={widths} />
-          <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </button>
-            <p>
-              Edit <code>src/App.jsx</code> and save to test HMR
-            </p>
-          </div>
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
+          <About Width={widths} />
+          <Contact widths={widths}/>
         </div>
       </div>
     </div>
