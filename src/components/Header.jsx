@@ -1,6 +1,12 @@
 import React from 'react';
 
 const Header = () => {
+
+  const handleScroll = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <header className="sticky flex justify-center top-0 h-24 bg-gray-800 text-gray-300 w-screen">
       {/* Logo on the left */}
@@ -37,7 +43,7 @@ const Header = () => {
 
       {/* Logo on the right */}
       <div className="logo-left text-xl font-bold size-16">
-        <img src={'./images/bmisp.png'} className='rounded-md' />
+
       </div>
       </div>
     </header>

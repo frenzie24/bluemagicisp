@@ -7,10 +7,14 @@ import Highlight from './components/Highlight'
 import Contact from './components/Contact'
 import About from './components/About'
 import BlogPostPreview from './components/BlogPostPreview'
+import { motion } from "motion/react"
 
 function App() {
   const [count, setCount] = useState(0)
   const widths = 'min-w-[20rem] sm-w-[20rem] md:w-[48rem] xl:w-[60rem] 2xl-w-[72rem]'
+
+
+
   return (
     <div className="w-screen h-screen bg-grey-900">
 
@@ -30,9 +34,14 @@ function App() {
         </div>
         */}
           <Highlight widths={widths} color={'bg-cyan-300'} link={'https://readinet.com'}/>
+          <motion.div animate={{rotate: 360 }}>
           <BlueMagic widths={widths} />
+          </motion.div>
           <Hotspots Width={widths} />
+          <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} />
           <About Width={widths} />
+
+
           <Contact widths={widths}/>
 
           <BlogPostPreview imageSrc={'/images/rs=w_200.3.png'}
