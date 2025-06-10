@@ -8,6 +8,8 @@ import Contact from './components/Contact'
 import About from './components/About'
 import BlogPostPreview from './components/BlogPostPreview'
 import { motion } from "motion/react"
+import UserRegistration from './components/UserRegistration'
+import Login from './components/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +26,8 @@ function App() {
           <div className='bg-cover bg-[url(/images/bmisp.png)] w-screen h-64'>
 
           </div>
-
+          <Login />
+            <UserRegistration />
           {/* neat stuff
 
         <div className='w-content h-fit'>
@@ -32,7 +35,7 @@ function App() {
             <img src={'./images/blob-5626e1c.png'} className="logo react" alt="React logo" />
           </a>
         </div>
-        */}
+
           <Highlight widths={widths} color={'bg-cyan-300'} link={'https://readinet.com'}/>
           <motion.div animate={{rotate: 360 }}>
           <BlueMagic widths={widths} />
@@ -48,7 +51,9 @@ function App() {
           title={"Look! A laptop"}
           previewText={'Proin eu vestibulum nunc, eget sagittis neque. Pellentesque rutrum elit ac nisi luctus, et pretium est dignissim. Mauris purus tellus, imperdiet sit amet ultrices sed, pellentesque pharetra dolor. Integer posuere est nec laoreet convallis. Cras cursus, urna id malesuada rhoncus, magna purus finibus nisl, eu porta quam metus et quam.'}
           />
+          */}
         </div>
+
       </div>
     </div>
   )
