@@ -17,6 +17,7 @@ import BlogPostPreview from './components/BlogPostPreview'
 import { motion } from "motion/react"
 import UserRegistration from './components/UserRegistration'
 import Login from './components/Login'
+import Home from './views/Home';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +25,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <div>Hello World</div>,
+      element: <Home />,
     },
   ]);
 
