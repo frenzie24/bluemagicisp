@@ -1,8 +1,8 @@
-import Login from "../components/Login";
 
+import BMSpinBanner from "../components/BMSpinBanner"
 const Home =()=>{
     return(<>
-    <Login />
+    <BMSpinBanner />
     </>)
 }
 

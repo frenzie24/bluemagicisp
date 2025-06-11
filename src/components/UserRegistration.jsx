@@ -28,7 +28,7 @@ const UserRegistration = () => {
         promotionalEmails: false,
         consent: false,
     });
-
+/*
     async function init() {
         // Load the Address Validation library.
         await google.maps.importLibrary('addressValidation');
@@ -44,6 +44,7 @@ const UserRegistration = () => {
         });
         return result;
     }
+        */
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -57,14 +58,11 @@ const UserRegistration = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const addressVaild = validateAddress(`${formData.streetAddress}, ${formData.city}, ${formData.state}, ${formData.zip} `);
+       // const addressVaild = validateAddress(`${formData.streetAddress}, ${formData.city}, ${formData.state}, ${formData.zip} `);
         console.log(addressVaild);
         console.log("Submitted Data:", formData);
     };
 
-    useEffect(()=>{
-        init();
-    },[]);
 
     return (
         <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">

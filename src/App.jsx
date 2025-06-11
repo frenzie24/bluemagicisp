@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
-import ReactDOM from "react-dom/client";
 
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { motion } from "motion/react"
 import Header from './components/Header'
 import Hotspots from './components/Hotspots'
 import BlueMagic from './components/BlueMagic'
@@ -14,7 +12,7 @@ import Highlight from './components/Highlight'
 import Contact from './components/Contact'
 import About from './components/About'
 import BlogPostPreview from './components/BlogPostPreview'
-import { motion } from "motion/react"
+
 import UserRegistration from './components/UserRegistration'
 import Login from './components/Login'
 import Home from './views/Home';
@@ -22,33 +20,25 @@ import Home from './views/Home';
 function App() {
   const [count, setCount] = useState(0)
   const widths = 'min-w-[20rem] sm-w-[20rem] md:w-[48rem] xl:w-[60rem] 2xl-w-[72rem]'
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-  ]);
-
-  const root = document.getElementById("root");
-/*
-  useEffect(()=>{
-    ReactDOM.createRoot(root).render(
-      <RouterProvider router={router} />
-    )
-  },[])
+  /*
   */
 
   return (
     <div className="w-screen h-screen bg-grey-900">
 
       <div className="flex flex-row flex-wrap items-center justify-center ">
-        <Header />
-        <div className='flex flex-col flex-wrap justify-center items-center'>
-          <div className='bg-cover bg-[url(/images/bmisp.png)] w-screen h-64'>
 
-          </div>
-          <Login />
-          <UserRegistration />
+        <Header />
+        <Router>
+          <Routes>
+            <Route path='/login' element={<Login ></Login>} />
+            <Route path='/home' element={<Home ></Home>} />
+            <Route path='/register' element={<UserRegistration ></UserRegistration>} />
+          </Routes>
+        </Router>
+        <div className='flex flex-col flex-wrap justify-center items-center'>
+          
+      
           {/* neat stuff
 
         <div className='w-content h-fit'>
