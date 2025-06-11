@@ -1,5 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
+import ReactDOM from "react-dom/client";
+
 import Header from './components/Header'
 import Hotspots from './components/Hotspots'
 import BlueMagic from './components/BlueMagic'
@@ -14,8 +21,21 @@ import Login from './components/Login'
 function App() {
   const [count, setCount] = useState(0)
   const widths = 'min-w-[20rem] sm-w-[20rem] md:w-[48rem] xl:w-[60rem] 2xl-w-[72rem]'
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Hello World</div>,
+    },
+  ]);
 
-
+  const root = document.getElementById("root");
+/*
+  useEffect(()=>{
+    ReactDOM.createRoot(root).render(
+      <RouterProvider router={router} />
+    )
+  },[])
+  */
 
   return (
     <div className="w-screen h-screen bg-grey-900">
@@ -27,7 +47,7 @@ function App() {
 
           </div>
           <Login />
-            <UserRegistration />
+          <UserRegistration />
           {/* neat stuff
 
         <div className='w-content h-fit'>
