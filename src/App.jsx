@@ -18,7 +18,6 @@ function App() {
         <Header />
         <div className='flex flex-col flex-wrap justify-center items-center'>
           <div className='bg-cover bg-[url(/images/bmisp.png)] w-screen h-64'>
-
           </div>
 
           {/* neat stuff
