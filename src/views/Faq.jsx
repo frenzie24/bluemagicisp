@@ -2,13 +2,15 @@
 import BMSpinBanner from "../components/BMSpinBanner"
 import AboutUs from "../components/AboutUs";
 import Header from "../components/Header.jsx"
-const About = () => {
+
+const Faq = () =>{
     return (
-    <div className="w-full h-full">
+        <div className="w-full h-full">
         <Header />
         <BMSpinBanner />
         <AboutUs />
-    </div>)
+    </div>
+    )
 }
 
-export default About;
+export default Faq;

@@ -12,7 +12,7 @@ const Row = ({ horizontalAlign = 'justify-center', verticalAlign = 'items-center
     width = 'w-full', height = 'h-full', containerPadding = 'p-0', padding = 'p-0',
     bgColor = 'bg-transparent', bgSize = 'auto', content = <></> }) => {
     return (
-        <div className={`${containerPadding} bg-green-100 w-full flex flex-row flex-wrap ${horizontalAlign} ${verticalAlign}`}>
+        <div className={`${containerPadding} w-full flex flex-row flex-wrap ${horizontalAlign} ${verticalAlign}`}>
             <div className={`${padding} ${flexRow} ${horizontalAlign} ${verticalAlign} ${width} ${height} ${bgColor} ${bgSize}`}>
                 {content}
             </div>

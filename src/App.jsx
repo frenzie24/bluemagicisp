@@ -5,17 +5,18 @@ import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import { motion } from "motion/react"
-import Header from './components/Header'
 import Hotspots from './components/Hotspots'
 import BlueMagic from './components/BlueMagic'
 import Highlight from './components/Highlight'
-import Contact from './components/Contact'
-import About from './components/About'
 import BlogPostPreview from './components/BlogPostPreview'
 
 import UserRegistration from './components/UserRegistration'
 import Login from './components/Login'
 import Home from './views/Home';
+import About from './views/About';
+import Shop from './views/Shop';
+import Contact from './views/Contact';
+import Faq from './views/Faq';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,16 +25,21 @@ function App() {
   */
 
   return (
-    <div className="w-screen h-screen bg-grey-900">
+    <div className="w-full h-full bg-grey-900">
 
       <div className="flex flex-row flex-wrap items-center justify-center ">
 
-        <Header />
+       
         <Router>
           <Routes>
             <Route path='/login' element={<Login ></Login>} />
-            <Route path='/home' element={<Home ></Home>} />
-            <Route path='/register' element={<UserRegistration ></UserRegistration>} />
+            <Route path='/' element={<Home ></Home>} />
+             <Route path='/home' element={<Home ></Home>} />
+             <Route path='/about' element={<About ></About>} />
+              <Route path='/shop' element={<Shop ></Shop>} />
+               <Route path='/Contact' element={<Contact ></Contact>} />
+               <Route path='/faq' element={<Faq />} />
+            <Route path='/user' element={<UserRegistration ></UserRegistration>} />
           </Routes>
         </Router>
         <div className='flex flex-col flex-wrap justify-center items-center'>

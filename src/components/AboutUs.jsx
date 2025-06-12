@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = ({ Width }) => {
+const AboutUs = ({ Width }) => {
     return (<>
  <h1 className={Width}>BLUE MAGIC ISP OFFERS RELIABLE HIGH SPEED 5G INTERNET SERVICE</h1>
         <div className={`${Width} grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4`}>
@@ -34,4 +34,4 @@ const About = ({ Width }) => {
     );
 };
 
-export default About;
+export default AboutUs;
