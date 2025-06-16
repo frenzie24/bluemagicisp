@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import BMSpinBanner from "./BMSpinBanner";
 
-const ContactUs = ({ widths }) => {
+const ContactUs = ({ width }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -18,35 +19,66 @@ const ContactUs = ({ widths }) => {
     };
 
     return (
-        <div className={widths + " mx-auto p-6 rounded-lg"}>
-            <h1 className="font-semibold text-gray-300 text-center mb-4">Contact Us</h1>
-            <div className="w-full flex flex-row flex-wrap justify-center">
-                <div className="w-1/2">
+        <div className={width + " mx-auto my-20 rounded-lg bg-slate-800/30 flex flex-row flex-wrap justify-center"}>
+            <h1 className=" text-center my-4 w-full">Contact Us</h1>
+            <BMSpinBanner />
+            <div className="w-4/5 flex flex-row flex-wrap justify-center p-2">
+                <div className="p-4 min-w-64 w-1/2  sm:w-128">
+                 <h2>Have a question?</h2>
                     <form onSubmit={handleSubmit} className="space-y-4 ">
                         {/* Name Input */}
 
                         <div>
-                            <label className="block text-gray-300 font-medium mb-1">Name</label>
+                            <label className="block font-medium mb-1">Name</label>
                             <input
                                 type="text"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="Enter your name"
+                                required
+                            />
+                        </div>
+
+                        {/* Account Input */}
+                        <div>
+                            <label className="block font-medium mb-1">MDN or Account Number</label>
+                            <input
+                                type="text"
+                                name="account"
+                                value={formData.account}
+                                onChange={handleChange}
+                                className="w-full p-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+
+
+                        {/* Subject Input */}
+                        <div>
+                            <label className="block font-medium mb-1">MDN or Account Number</label>
+                            <input
+                                type="text"
+                                name="subject"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full p-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Enter your email"
                                 required
                             />
                         </div>
 
                         {/* Email Input */}
                         <div>
-                            <label className="block text-gray-300 font-medium mb-1">Email</label>
+                            <label className="block font-medium mb-1">Email</label>
                             <input
                                 type="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="Enter your email"
                                 required
                             />
@@ -54,12 +86,12 @@ const ContactUs = ({ widths }) => {
 
                         {/* Message Input */}
                         <div>
-                            <label className="block text-gray-300 font-medium mb-1">Message</label>
+                            <label className="block font-medium mb-1">Message</label>
                             <textarea
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="Write your message here..."
                                 rows="5"
                                 required
@@ -69,25 +101,30 @@ const ContactUs = ({ widths }) => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-full bg-gray-700 text-white py-2 rounded-md font-medium hover:bg-gray-900 transition"
+                            className="w-full bg-slate-700 text-white py-2 rounded-md font-medium hover:bg-slate-900 transition"
                         >
                             Send Message
                         </button>
                     </form>
 
                 </div>
-                <div className="w-1/2">
+                         <div className="p-4 min-w-64 w-1/2 sm:w-96">
                     <h3>BETTER YET GET PERSONAL WITH US</h3>
                     <div>
-                        TEXT HERE TEXT HERE TEXT HERE
+
+                       
+                        <p>Please submit your contact information or see our contact information below. Emails will be responded to within one business day.</p>
+
+                        <p>Contact Number:  <a href="tel:+8503724284" className="text-blue-500 hover:underline">
+                            8503724284</a> <a href="tel:+202" className="text-blue-500 hover:underline">EXT
+                            </a></p>
+                        <p>Contact Email : <a href='mailto:info@bluemagicisp.com' className="text-blue-500 hover:underline">info@bluemagicisp.com</a></p>
                     </div>
-                    <a href="tel:+8503724284" className="text-blue-500 hover:underline">
-                        8503724284</a> EXT <a href="tel:+202" className="text-blue-500 hover:underline">
-                    </a>
+
                     <div className="max-w-md mx-auto p-4 rounded-lg">
-                        <h2 className="text-center text-xl font-semibold mb-4 text-gray-300">
+                        <h4 className="text-center text-xl font-semibold mb-4">
                             Hours of Operation
-                        </h2>
+                        </h4>
                         <table className="w-full text-left ">
                             <thead>
                                 <tr>
@@ -131,7 +168,7 @@ const ContactUs = ({ widths }) => {
 
                 </div>
                 <div className="w-full">
-                    <h1>Connect with Us</h1>
+                    <h2>Connect with Us</h2>
 
                     <div className="flex justify-center space-x-4">
                         {/* Facebook Button */}
@@ -161,8 +198,8 @@ const ContactUs = ({ widths }) => {
 
 
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

@@ -7,32 +7,47 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+@keyframes moveDownAndUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px); /* Adjust the value as needed */
+  }
 }
 
-@keyframes logo-spin {
+.glowing-text {
+  animation: moveDownAndUp 120s ease-in-out infinite alternate;
+
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.fadeInAnimation {
+  animation: fadeIn 2s ease-in forwards;
+}
+
+
+.blinking-cursor {
+  display: inline-block;
+  margin-right: 5px;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 1s step-start infinite;
 }
 
 .card {
@@ -46,15 +61,40 @@
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: bolder;
+  padding: 20px 0px;
+}
+h2 {
+  font-size: 2.8em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.8em;
+  line-height: 1.1;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.5m;
+  line-height: 1.1;
 }
 
 .embla {
   overflow: hidden;
+  
+  height: 100%;
 }
 .embla__container {
   display: flex;
+  
+  height: 100%;
 }
 .embla__slide {
-  flex: 0 0 50%;
-  min-width: 0;
+  flex:0 0 80%;
+  
+}
+
+p {
+  font-weight: 500;
+  padding-bottom: 8px;
 }

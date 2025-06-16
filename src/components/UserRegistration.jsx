@@ -95,7 +95,7 @@ const UserRegistration = () => {
                     <input type="checkbox" name="consent" className="w-4 h-4" onChange={handleChange} required />
                     <label>I consent to Bluemagic ISP terms of service</label>
                 </div>
-                <button type="submit" className={`w-full p-2 rounded ${passwordsMatch ? "bg-blue-500 text-white hover:bg-blue-600" : "bg-gray-400 text-gray-700 cursor-not-allowed"}`} disabled={!passwordsMatch}>
+                <button type="submit" className={`w-full p-2 rounded ${passwordsMatch ? "bg-blue-500 text-white hover:bg-blue-600" : "bg-slate-400 text-slate-700 cursor-not-allowed"}`} disabled={!passwordsMatch}>
                     Register
                 </button>
             </form>
