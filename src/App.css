@@ -47,3 +47,14 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 50%;
+  min-width: 0;
+}
