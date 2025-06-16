@@ -8,8 +8,8 @@ const BlogPostPreview = ({ imageSrc, title, previewText }) => {
 
       {/* Title & Preview Text - Aligned Right */}
       <div className="flex-1">
-        <h2 className="text-xl font-semibold text-gray-300">{title}</h2>
-        <p className="text-gray-400">{previewText}</p>
+        <h2 className="text-xl font-semibold text-slate-300">{title}</h2>
+        <p className="text-slate-400">{previewText}</p>
       </div>
     </div>
   );

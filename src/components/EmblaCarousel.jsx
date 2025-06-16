@@ -12,14 +12,14 @@ export function EmblaCarousel({slides}) {
     }, [emblaApi])
 
     return (
-<div className='h-64'>
+    <div className='size-full'>
         <div className="embla" ref={emblaRef}>
 
             <div className="embla__container">
 
 
                 {slides?.map(slide => (
-                <div className={`embla__slide`}> {slide}</div>
+                <div key={`embla${Math.random()}`} className={`embla__slide`}> {slide}</div>
                 ))}
               
             </div>

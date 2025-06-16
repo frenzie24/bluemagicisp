@@ -25,7 +25,7 @@ function App() {
   */
 
   return (
-    <div className="w-full h-full bg-grey-900">
+    <div className="h-full bg-grey-900">
 
       <div className="flex flex-row flex-wrap items-center justify-center ">
 
@@ -37,13 +37,12 @@ function App() {
              <Route path='/home' element={<Home ></Home>} />
              <Route path='/about' element={<About ></About>} />
               <Route path='/shop' element={<Shop ></Shop>} />
-               <Route path='/Contact' element={<Contact ></Contact>} />
+               <Route path='/contact' element={<Contact ></Contact>} />
                <Route path='/faq' element={<Faq />} />
             <Route path='/user' element={<UserRegistration ></UserRegistration>} />
           </Routes>
         </Router>
-        <div className='flex flex-col flex-wrap justify-center items-center'>
-          
+        
       
           {/* neat stuff
 
@@ -69,7 +68,7 @@ function App() {
           previewText={'Proin eu vestibulum nunc, eget sagittis neque. Pellentesque rutrum elit ac nisi luctus, et pretium est dignissim. Mauris purus tellus, imperdiet sit amet ultrices sed, pellentesque pharetra dolor. Integer posuere est nec laoreet convallis. Cras cursus, urna id malesuada rhoncus, magna purus finibus nisl, eu porta quam metus et quam.'}
           />
           */}
-        </div>
+       
 
       </div>
     </div>
